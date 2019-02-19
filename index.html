@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIA-Tracker</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text%7CUbuntu+Condensed" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>LIA-Tracker</h1>
+    </header>
+    <main>
+        <div id="input">
+            <div id="input-status">Lägg till ny ansökan</div>
+            <form>
+                <label for="company">Företag:</label>
+                <input id="company" name="company" type="text">
+                
+                <label for="contact">Kontaktperson:</label>
+                <input id="contact" name="contact" type="text">
+                
+                <label for="email">E-post:</label>
+                <input id="email" name="email" type="email">
+                
+                <label for="phone">Telefon:</label>
+                <input id="phone" name="phone" type="text">
+                
+                <label for="contact-date">Ansökningsdatum:</label>
+                <input id="contact-date" name="contact-date" type="date">
+                
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="">Sökt</option>
+                    <option value="status-pending">Samtal pågår</option>
+                    <option value="status-yes">Fått LIA</option>
+                    <option value="status-no">Ej fått LIA</option>
+                </select>
+                
+                <label for="reply-date">Återkoppling:</label>
+                <input id="reply-date" name="reply-date" type="date">
+                <button name="add-date" type="button">Lägg till</button>
+                
+                <select name="reply-dates" multiple></select>
+                <button name="rem-date" type="button">Ta bort</button>
+                
+                <label for="comments">Kommentar:</label>
+                <textarea id="comments" name="comments"></textarea>
+                
+
+                <div id="buttons">
+                    <button name="clear" type="reset">Rensa</button>
+                    <button name="save" type="submit">Spara</button>
+                </div>  
+            </form>
+        </div>
+
+        <div id="list">
+            <div id="list-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Företag</th>
+                            <th>Kontaktperson</th>
+                            <th>E&#8209;post</th>
+                            <th>Telefon</th>
+                            <th>Ansökningsdatum</th>
+                            <th>Senaste&nbsp;återkoppling</th>
+                            <th colspan="3">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="list-options">
+                <div>
+                    <label for="import-file" id="import-list">Importera lista</label>
+                    <input name="import-file" id="import-file" type="file" accept=".lia">
+                    <button name="demo-list">Demolista</button>
+                </div> 
+                <div> 
+                    <button name="clear-list">Rensa lista</button>
+                    <a href="" id="save-list">Spara lista</a>
+                    <a href="" id="export-list">Skapa CSV-fil</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Copyright &copy; Andreas Åkerlöf 2019
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
