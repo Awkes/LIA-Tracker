@@ -4,7 +4,7 @@ let list = (localStorage.list) ? parseList(localStorage.list) : [];
 // Funktion som kontrollerar att listan är i korrekt format
 function parseList(txt) {
     try { return JSON.parse(txt); } 
-    catch { return [new Post('Felaktigt format på lagrad lista! Skapa en ny eller ladda upp en sparad lista.','','','','','','','')]; }
+    catch(err) { return [new Post('Felaktigt format på lagrad lista! Skapa en ny eller ladda upp en sparad lista.','','','','','','','')]; }
 }
 
 // Variabel för att hålla redan på eventuell post som redigeras
@@ -39,7 +39,7 @@ const comments = document.querySelector('[name=comments]');
 const table = document.querySelector('tbody');
 const importFile = document.querySelector('#import-file');
 const demoList = document.querySelector('[name=demo-list]');
-const clearList = document.querySelector('[name=clear-list');
+const clearList = document.querySelector('[name=clear-list]');
 const saveList = document.querySelector('#save-list');
 const exportList = document.querySelector('#export-list');
 form.addEventListener('submit', savePost);
