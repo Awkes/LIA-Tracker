@@ -42,7 +42,7 @@ form > * { grid-area: auto / 1 / span 1 / span 1; }
 [name=reply-dates] { grid-area: 8 / 2 / span 2 / span 2; }
 [name=add-date] { grid-area: 8 / 4 / span 1 / span 1; }
 [name=rem-date] { grid-area: 9 / 4 / span 1 / span 1; }
-[for=comments] { grid-area: 10 / 1 / span 1 / span 1; }
+[for=post-comments] { grid-area: 10 / 1 / span 1 / span 1; }
 [name=comments] { grid-area: 10 / 2 / span 2 / span 3; }
 
 #buttons { 
@@ -169,17 +169,17 @@ tbody >tr:nth-child(even) { background-color: rgba(85,85,85,0.5) }
     /* Form grid */
     form { grid: repeat(6,1fr) / repeat(4,1.5fr) 1fr; }
     /* Kolumn 1-2 */
-    [for=company] { grid-area: 1 / 1 / 2 / 2; }
+    [for=post-company] { grid-area: 1 / 1 / 2 / 2; }
     [name=company] { grid-area: 1 / 2 / 2 / 3; }
-    [for=contact] { grid-area: 2 / 1 / 3 / 2; }
+    [for=post-contact] { grid-area: 2 / 1 / 3 / 2; }
     [name=contact] { grid-area: 2 / 2 / 3 / 3; }
-    [for=email] { grid-area: 3 / 1 / 4 / 2; }
+    [for=post-email] { grid-area: 3 / 1 / 4 / 2; }
     [name=email] { grid-area: 3 / 2 / 4 / 3; }
-    [for=phone] { grid-area: 4 / 1 / 5 / 2; }
+    [for=post-phone] { grid-area: 4 / 1 / 5 / 2; }
     [name=phone] { grid-area: 4 / 2 / 5 / 3; }
     [for=contact-date] { grid-area: 5 / 1 / 6 / 2; }
     [name=contact-date] { grid-area: 5 / 2 / 6 / 3; }
-    [for=status] { grid-area: 6 / 1 / 7 / 2; }
+    [for=post-status] { grid-area: 6 / 1 / 7 / 2; }
     [name=status] { grid-area: 6 / 2 / 7 / 3; }
     /* Kolumn 3-5 */
     [for=reply-date] { grid-area: 1 / 3 / 2 / 4; }
@@ -187,7 +187,7 @@ tbody >tr:nth-child(even) { background-color: rgba(85,85,85,0.5) }
     [name=add-date] { grid-area: 1 / 5 / 2 / 6; }
     [name=reply-dates] { grid-area: 2 / 4 / 4 / 5; }
     [name=rem-date] { grid-area: 2 / 5 / 3 / 6; }
-    [for=comments] { grid-area: 4 / 3 / 5 / 4; }
+    [for=post-comments] { grid-area: 4 / 3 / 5 / 4; }
     [name=comments] { grid-area: 4 / 4 / 6 / 6; }   
     #buttons { grid-area: 6 / 4 / 7 / 6; }
 }
